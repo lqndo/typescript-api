@@ -1,11 +1,5 @@
-import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
-
-const app = new Hono();
-
-app.get('/hello', (c) => {
-  return c.text('Hello, Hono with TypeScript!');
-});
+import { app } from './users/infrastructure/ListUsersEndpoint.ts';
 
 serve(
   {
