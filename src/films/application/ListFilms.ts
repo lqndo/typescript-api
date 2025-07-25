@@ -1,6 +1,6 @@
 import { Film } from '/workspace/src/films/domain/Film.ts';
 
-export function listFilm(): Film[] {
+export function listFilms(): Film[] {
   let films: Film[] = [];
   for (let i = 0; i < 10; ++i) {
     let index: string = i.toString();
