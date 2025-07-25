@@ -1,5 +1,12 @@
 import { serve } from '@hono/node-server';
-import { app } from './users/infrastructure/ListUsersEndpoint.ts';
+import { filmEndpoints } from './films/infrastructure/FilmEndpoints.ts';
+import { userEndpoints } from './users/infrastructure/UserEndpoints.ts';
+import { Hono } from 'hono';
+
+const app = new Hono();
+
+app.route('/', filmEndpoints);
+app.route('/', userEndpoints);
 
 serve(
   {
