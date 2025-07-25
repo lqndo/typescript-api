@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { listFilm } from '../application/listFilms.ts';
+import { listFilm } from '../application/ListFilms.ts';
 
 export const filmEndpoints = new Hono();
 

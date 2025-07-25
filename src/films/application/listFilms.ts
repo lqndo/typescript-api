@@ -1,4 +1,4 @@
-import { Film } from '/workspace/src/films/domain/film.ts';
+import { Film } from '/workspace/src/films/domain/Film.ts';
 
 export function listFilm(): Film[] {
   let films: Film[] = [];

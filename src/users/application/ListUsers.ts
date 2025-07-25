@@ -1,4 +1,4 @@
-import { User } from '/workspace/src/users/domain/user.ts';
+import { User } from '/workspace/src/users/domain/User.ts';
 
 export function listUsers(): User[] {
   let users: User[] = [];
