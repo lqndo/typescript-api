@@ -12,6 +12,13 @@ app.get('/users', (c) => {
   return c.json(listUsers());
 });
 
-app.get('/film', (c) => {
+app.get('/users/:id', (c) => {
+  const itemId = c.req.param('id');
+  const index = Number(itemId);
+  const users = listUsers();
+  return c.json(users[index]);
+});
+
+app.get('/films', (c) => {
   return c.json(listFilm());
 });
