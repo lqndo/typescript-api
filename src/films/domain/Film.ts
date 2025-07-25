@@ -4,7 +4,6 @@ export class Film {
   synopsis: string;
   genres: string[];
 
-  // constructor(public username: string) {} but 'erasableSyntaxOnly' is enabled
   constructor(title: string, date: Date, synopsis: string, genres: string[]) {
     this.title = title;
     this.date = date;
