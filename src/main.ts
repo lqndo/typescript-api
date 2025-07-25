@@ -1,7 +1,7 @@
 import { serve } from '@hono/node-server';
+import { Hono } from 'hono';
 import { filmEndpoints } from './films/infrastructure/FilmEndpoints.ts';
 import { userEndpoints } from './users/infrastructure/UserEndpoints.ts';
-import { Hono } from 'hono';
 
 const app = new Hono();
 

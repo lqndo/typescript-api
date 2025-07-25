@@ -1,10 +1,10 @@
-import { User } from '/workspace/src/users/domain/user.ts';
+import { User } from '../domain/User.ts';
 
 export function listUsers(): User[] {
-  let users: User[] = [];
+  let users = [];
   for (let i = 0; i < 10; ++i) {
-    let index: string = i.toString();
-    let user: User = new User('passwd', index + '@gmail.com', index);
+    let index = i.toString();
+    let user = new User('passwd', index + '@gmail.com', index);
     users.push(user);
   }
   return users;

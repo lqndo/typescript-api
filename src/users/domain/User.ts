@@ -3,7 +3,6 @@ export class User {
   private email: string;
   username: string;
 
-  // constructor(public username: string) {} but 'erasableSyntaxOnly' is enabled
   constructor(password: string, email: string, username: string) {
     this.password = password;
     this.email = email;

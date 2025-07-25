@@ -7,12 +7,13 @@
   "type": "module",
   "main": "src/main.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest --config tests/config.ts "
   },
   "devDependencies": {
     "@types/node": "^24.0.10",
     "prettier": "^3.6.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@hono/node-server": "^1.15.0",
