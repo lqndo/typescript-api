@@ -1,0 +1,30 @@
+name: pull request
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [synchronize, opened, reopened, ready_for_review]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    name: Test
+    runs-on: ubuntu-latest
+    container: node:lts
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Tests
+        run: node --run test
