@@ -11,7 +11,18 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.tabSize": 2,
         "prettier.requireConfig": true,
-        "vitest.rootConfig": "./tests/config.ts"
+        "vitest.rootConfig": "./tests/config.ts",
+        "launch": {
+          "version": "0.2.0",
+          "configurations": [
+            {
+              "name": "Debug",
+              "type": "node",
+              "request": "launch",
+              "program": "${workspaceFolder}/src/main.ts"
+            }
+          ]
+        }
       }
     }
   }
